@@ -61,6 +61,8 @@ If you have defined your environment variables correctly, your app should be run
 
 This project is using [Vercel](https://vercel.com/) to deploy the front-end code as well the serverless back-end API functions contained within our [Next.js](https://nextjs.org) app.
 
+This project has been configured to automatically deploy to [Vercel](https://vercel.com/) - available at [https://demo-hasura-nextjs-vercel-with-bootstrap.vercel.app](https://demo-hasura-nextjs-vercel-with-bootstrap.vercel.app) - using the [Vercel for GitHub](https://vercel.com/github) integration once code has been merged into `master`
+
 To manually deploy to [Vercel](https://vercel.com/) to a preview or staging URL, you can run `npm run deploy`
 To manually deploy to [Vercel](https://vercel.com/) and immediately replace the current production site, you can run `npm run deploy:prod`
 
