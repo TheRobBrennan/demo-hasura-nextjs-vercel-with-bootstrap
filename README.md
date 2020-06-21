@@ -1,1 +1,3 @@
 After taking the [tutorial](https://hasura.io/learn/graphql/nextjs-fullstack-serverless) for working with [Hasura](https://hasura.io/), [Apollo](https://www.apollographql.com), and [Next.js](https://nextjs.org), and [Vercel](https://vercel.com/), I wanted to create a separate project for my own personal refinements and enhancements.
+
+This project started out using the app I created in my [https://github.com/TheRobBrennan/explore-hasura-apollo-nextjs](https://github.com/TheRobBrennan/explore-hasura-apollo-nextjs) - which is using the [Hasura](https://hasura.io/) server I have configured on [Heroku](https://www.heroku.com/).
