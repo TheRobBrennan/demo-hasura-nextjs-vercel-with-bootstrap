@@ -113,3 +113,22 @@ $ vercel secrets add dhnvwb-redirect-uri <YOUR_REDIRECT_URI>                    
 $ vercel secrets add dhnvwb-post-logout-redirect-uri <YOUR_POST_LOGOUT_REDIRECT_URI>    // https://myapp.vercel.app
 $ vercel secrets add dhnvwb-session-cookie-secret <YOUR_COOKIE_SECRET>                  // Random 32 character string
 ```
+
+### Environments
+
+This project has been configured on [Vercel](https://vercel.com/) so that manually deployed code - using `npm run deploy` or `npm run deploy:dev` - will redirect to the appropriate environments.
+
+For this to happen, the following environment variables need to be defined in the [Vercel](https://vercel.com/) UI for `Production` and `Preview` environments:
+
+- POST_LOGOUT_REDIRECT_URI
+- REDIRECT_URI
+
+If you would like to have other variables explicitly set for these environments, please make sure they are declared in both places and that they do not appear in our [Vercel](https://vercel.com/) configuration file `app/vercel.json`
+
+#### Preview
+
+This will enable users to log in and authenticate using the `preview` URL of [https://demo-hasura-nextjs-vercel-with-bootstrap.therobbrennan.vercel.app](https://demo-hasura-nextjs-vercel-with-bootstrap.therobbrennan.vercel.app)
+
+#### Production
+
+This will enable users to log in and authenticate using the `production` URL of [https://demo-hasura-nextjs-vercel-with-bootstrap.vercel.app](https://demo-hasura-nextjs-vercel-with-bootstrap.vercel.app)

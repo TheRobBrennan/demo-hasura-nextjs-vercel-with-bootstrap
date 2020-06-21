@@ -6,8 +6,6 @@
       "AUTH0_AUDIENCE": "@dhnvwb-auth0-audience",
       "AUTH0_CLIENT_ID": "@dhnvwb-auth0-client-id",
       "AUTH0_CLIENT_SECRET": "@dhnvwb-auth0-client-secret",
-      "REDIRECT_URI": "@dhnvwb-redirect-uri",
-      "POST_LOGOUT_REDIRECT_URI": "@dhnvwb-post-logout-redirect-uri",
       "SESSION_COOKIE_SECRET": "@dhnvwb-session-cookie-secret"
     }
   }
