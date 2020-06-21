@@ -54,3 +54,58 @@ $ npm start
 If you have defined your environment variables correctly, your app should be running at [http://localhost:3000](http://localhost:3000) - allowing you to log in and log out using [Auth0](https://auth0.com) for authentication.
 
 **PRO TIP** Once you have installed your dependencies, you can simply run `npm start` from the root level of this project.
+
+# Deployment
+
+## Vercel
+
+This project is using [Vercel](https://vercel.com/) to deploy the front-end code as well the serverless back-end API functions contained within our [Next.js](https://nextjs.org) app.
+
+To manually deploy to [Vercel](https://vercel.com/) to a preview or staging URL, you can run `npm run deploy`
+To manually deploy to [Vercel](https://vercel.com/) and immediately replace the current production site, you can run `npm run deploy:prod`
+
+### Initial setup and configuration
+
+If you are deploying this project to [Vercel](https://vercel.com/) for the first time, when you run `npm run deploy` you will be prompted as follows.
+
+You can accept most of the defaults as is; however please pay special attention to:
+
+- `Which scope do you want to deploy to?` - If you do not have an account on Vercel, you may be prompted to create one.
+- `In which directory is your code located?` - This needs to
+
+```sh
+$ npm run deploy
+
+Vercel CLI 19.1.1
+? Set up and deploy “~/repos/demo-hasura-nextjs-vercel-with-bootstrap”? [Y/n] Y
+? Which scope do you want to deploy to? TheRobBrennan
+? Link to existing project? [y/N] n
+? What’s your project’s name? demo-hasura-nextjs-vercel-with-bootstrap
+? In which directory is your code located? ./app
+Auto-detected project settings (Next.js):
+- Build Command: `npm run build` or `next build`
+- Output Directory: Next.js default
+- Development Command: next dev --port $PORT
+? Want to override the settings? [y/N] n
+🔗  Linked to therobbrennan/demo-hasura-nextjs-vercel-with-bootstrap (created .vercel and added it to .gitignore)
+🔍  Inspect: https://vercel.com/therobbrennan/demo-hasura-nextjs-vercel-with-bootstrap/dx4tnv5ty [2s]
+✅  Production: https://demo-hasura-nextjs-vercel-with-bootstrap.vercel.app [copied to clipboard] [49s]
+📝  Deployed to production. Run `vercel --prod` to overwrite later (https://vercel.link/2F).
+💡  To change the domain or build command, go to https://zeit.co/therobbrennan/demo-hasura-nextjs-vercel-with-bootstrap/settings
+```
+
+#### Secrets
+
+I have chosen to use the `dhnvwb` prefix for all of my secrets, but it is just personal preference due to the number of projects I have.
+
+You will need to define the following secrets:
+
+```sh
+$ vercel secrets add dhnvwb-auth0-domain <YOUR_AUTH0_DOMAIN>                            // myapp.us.auth0.com
+$ vercel secrets add dhnvwb-auth0-audience <YOUR_AUTH0_AUDIENCE_URL>                    // https://myapp.us.auth0.com/api/v2/
+$ vercel secrets add dhnvwb-auth0-client-id <YOUR_AUTH0_CLIENT_ID>                      // See your Auth0 Application settings
+$ vercel secrets add dhnvwb-auth0-client-secret <YOUR_AUTH0_CLIENT_SECRET>              // See your Auth0 Application settings
+$ vercel secrets add dhnvwb-redirect-uri <YOUR_REDIRECT_URI>                            // https://myapp.vercel.app/api/callback
+$ vercel secrets add dhnvwb-post-logout-redirect-uri <YOUR_POST_LOGOUT_REDIRECT_URI>    // https://myapp.vercel.app
+$ vercel secrets add dhnvwb-session-cookie-secret <YOUR_COOKIE_SECRET>                  // Random 32 character string
+```
