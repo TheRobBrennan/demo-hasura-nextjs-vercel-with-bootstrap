@@ -4,6 +4,7 @@
   "description": "Refinements and enhancements for the app created in the Hasura tutorial at https://hasura.io/learn/graphql/nextjs-fullstack-serverless",
   "keywords": [
     "hasura",
+    "auth0",
     "nextjs",
     "apollo",
     "vercel",
