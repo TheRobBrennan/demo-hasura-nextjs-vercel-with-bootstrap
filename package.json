@@ -11,6 +11,11 @@
     "bootstrap"
   ],
   "author": "Rob Brennan <rob@therobbrennan.com> (therobbrennan.com)",
+  "scripts": {
+    "start": "npm run start:dev",
+    "start:dev": "cd app && npm run dev",
+    "start:prod": "cd app && npm start"
+  },
   "license": "ISC",
   "repository": {
     "type": "git",
