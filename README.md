@@ -63,6 +63,8 @@ This project is using [Vercel](https://vercel.com/) to deploy the front-end code
 
 This project has been configured to automatically deploy to [Vercel](https://vercel.com/) - available at [https://demo-hasura-nextjs-vercel-with-bootstrap.vercel.app](https://demo-hasura-nextjs-vercel-with-bootstrap.vercel.app) - using the [Vercel for GitHub](https://vercel.com/github) integration once code has been merged into `master`
 
+**PRO TIP** Don't forget to enable GitHub integration for your project on [Vercel](https://vercel.com/) as well as give permission to the [Vercel for GitHub](https://vercel.com/github) integration on your account, otherwise this automatic deployment will not work 🤓
+
 To manually deploy to [Vercel](https://vercel.com/) to a preview or staging URL, you can run `npm run deploy`
 To manually deploy to [Vercel](https://vercel.com/) and immediately replace the current production site, you can run `npm run deploy:prod`
 
