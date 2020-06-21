@@ -14,7 +14,10 @@
   "scripts": {
     "start": "npm run start:dev",
     "start:dev": "cd app && npm run dev",
-    "start:prod": "cd app && npm start"
+    "start:prod": "cd app && npm start",
+    "deploy": "npm run deploy:dev",
+    "deploy:dev": "npx vercel",
+    "deploy:prod": "npx vercel --prod"
   },
   "license": "ISC",
   "repository": {
