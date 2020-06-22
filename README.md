@@ -20,7 +20,7 @@ Our [Next.js](https://nextjs.org) application requires you to define several env
 
 Please copy `app/.env.example` to `app/.env` and make sure you have defined all the values requested:
 
-````sh
+```sh
 # Application settings
 DOMAIN=http://localhost:3000
 SESSION_COOKIE_SECRET=BXyv4qDtBKYxJtLopfY7nj75sJg3p2Ka
@@ -143,4 +143,7 @@ This will enable users to log in and authenticate using the `preview` URL of [ht
 #### Production
 
 This will enable users to log in and authenticate using the `production` URL of [https://demo-hasura-nextjs-vercel-with-bootstrap.vercel.app](https://demo-hasura-nextjs-vercel-with-bootstrap.vercel.app)
-````
+
+```
+
+```
