@@ -29,8 +29,9 @@ const resetTokenLink = onError(({ networkError }) => {
 });
 const createHttpLink = (headers) => {
   const httpLink = new HttpLink({
-    // TODO: Replace with your domain
-    uri: "https://explore-hasura-apollo-nextjs.herokuapp.com/v1/graphql",
+    uri:
+      process.env.GRAPHQL_HTTPS_ENDPOINT ||
+      "https://explore-hasura-apollo-nextjs.herokuapp.com/v1/graphql",
     credentials: "include",
     headers, // auth token is fetched on the server side
     fetch,
@@ -39,9 +40,10 @@ const createHttpLink = (headers) => {
 };
 const createWSLink = () => {
   return new WebSocketLink(
-    // TODO: Replace with your domain
     new SubscriptionClient(
-      "wss://explore-hasura-apollo-nextjs.herokuapp.com/v1/graphql",
+      process.env.GRAPHQL_WSS_ENDPOINT
+        ? process.env.GRAPHQL_WSS_ENDPOINT
+        : "wss://explore-hasura-apollo-nextjs.herokuapp.com/v1/graphql",
       {
         lazy: true,
         reconnect: true,

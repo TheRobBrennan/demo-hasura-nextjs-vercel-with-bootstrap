@@ -32,8 +32,17 @@ AUTH0_AUDIENCE=
 AUTH0_CLIENT_ID=
 AUTH0_CLIENT_SECRET=
 AUTH0_DOMAIN=
-POST_LOGOUT_REDIRECT_URI=http://localhost:3000/
-REDIRECT_URI=http://localhost:3000/api/callback
+
+# ------------------------------------------------------ #
+#          DO NOT DEFINE THESE IN YOUR .env FILE         #
+# ------------------------------------------------------ #
+# Define these for each environment in Vercel            #
+# ------------------------------------------------------ #
+# GRAPHQL_HTTPS_ENDPOINT=https://explore-hasura-apollo-nextjs.herokuapp.com/v1/graphql
+# GRAPHQL_WSS_ENDPOINT=wss://explore-hasura-apollo-nextjs.herokuapp.com/v1/graphql
+# POST_LOGOUT_REDIRECT_URI=http://localhost:3000/
+# REDIRECT_URI=http://localhost:3000/api/callback
+# ------------------------------------------------------ #
 ```
 
 ### Start the application
@@ -120,6 +129,8 @@ This project has been configured on [Vercel](https://vercel.com/) so that manual
 
 For this to happen, the following environment variables need to be defined in the [Vercel](https://vercel.com/) UI for `Production` and `Preview` environments:
 
+- GRAPHQL_HTTPS_ENDPOINT
+- GRAPHQL_WSS_ENDPOINT
 - POST_LOGOUT_REDIRECT_URI
 - REDIRECT_URI
 
