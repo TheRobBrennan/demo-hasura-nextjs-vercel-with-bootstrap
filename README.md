@@ -143,7 +143,3 @@ This will enable users to log in and authenticate using the `preview` URL of [ht
 #### Production
 
 This will enable users to log in and authenticate using the `production` URL of [https://demo-hasura-nextjs-vercel-with-bootstrap.vercel.app](https://demo-hasura-nextjs-vercel-with-bootstrap.vercel.app)
-
-```
-
-```
