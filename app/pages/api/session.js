@@ -7,9 +7,6 @@ export default async function session(req, res) {
     const tokenCache = auth0.tokenCache(req, res);
     const { accessToken } = await tokenCache.getAccessToken();
 
-    // TODO: JWT token debugging
-    // console.log(`[DEBUG] JWT: ${accessToken}`);
-
     res.status(200).json({ accessToken });
   } catch (error) {
     console.error(error);
