@@ -42,7 +42,8 @@ AUTH0_DOMAIN=
 # GRAPHQL_WSS_ENDPOINT=wss://explore-hasura-apollo-nextjs.herokuapp.com/v1/graphql
 # POST_LOGOUT_REDIRECT_URI=http://localhost:3000/
 # REDIRECT_URI=http://localhost:3000/api/callback
-# ------------------------------------------------------ #```
+# ------------------------------------------------------ #
+```
 
 ### Start the application
 
@@ -57,7 +58,7 @@ $ npm run dev
 
 # To run Next.js as a production server
 $ npm start
-````
+```
 
 If you have defined your environment variables correctly, your app should be running at [http://localhost:3000](http://localhost:3000) - allowing you to log in and log out using [Auth0](https://auth0.com) for authentication.
 
@@ -142,3 +143,4 @@ This will enable users to log in and authenticate using the `preview` URL of [ht
 #### Production
 
 This will enable users to log in and authenticate using the `production` URL of [https://demo-hasura-nextjs-vercel-with-bootstrap.vercel.app](https://demo-hasura-nextjs-vercel-with-bootstrap.vercel.app)
+````
