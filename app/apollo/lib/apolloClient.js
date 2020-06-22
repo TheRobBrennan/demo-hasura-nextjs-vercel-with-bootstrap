@@ -5,7 +5,6 @@ import { HttpLink } from "apollo-link-http";
 import { onError } from "apollo-link-error";
 import { WebSocketLink } from "apollo-link-ws";
 import { SubscriptionClient } from "subscriptions-transport-ws";
-import auth0 from "./auth0";
 let accessToken = null;
 const requestAccessToken = async () => {
   if (accessToken) return;

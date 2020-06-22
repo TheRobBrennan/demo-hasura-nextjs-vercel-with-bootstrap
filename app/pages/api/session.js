@@ -1,14 +1,11 @@
 import fetch from "isomorphic-unfetch";
 
-import auth0 from "../../lib/auth0";
+import auth0 from "../../auth0/auth0";
 
 export default async function session(req, res) {
   try {
     const tokenCache = auth0.tokenCache(req, res);
     const { accessToken } = await tokenCache.getAccessToken();
-
-    // TODO: JWT token debugging
-    // console.log(`[DEBUG] JWT: ${accessToken}`);
 
     res.status(200).json({ accessToken });
   } catch (error) {

@@ -17,7 +17,6 @@ const ONLINE_USERS_SUBSCRIPTION = gql`
 
 const OnlineUsersWrapper = () => {
   const [onlineIndicator, setOnlineIndicator] = useState(0);
-  const [values, setValues] = useState({});
   let onlineUsersList;
 
   useEffect(() => {
