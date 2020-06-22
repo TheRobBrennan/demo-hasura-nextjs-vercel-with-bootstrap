@@ -129,8 +129,8 @@ This project has been configured on [Vercel](https://vercel.com/) so that manual
 
 For this to happen, the following environment variables need to be defined in the [Vercel](https://vercel.com/) UI for `Production` and `Preview` environments:
 
-- GRAPHQL-HTTPS-ENDPOINT
-- GRAPHQL-WSS-ENDPOINT
+- GRAPHQL_HTTPS_ENDPOINT
+- GRAPHQL_WSS_ENDPOINT
 - POST_LOGOUT_REDIRECT_URI
 - REDIRECT_URI
 
