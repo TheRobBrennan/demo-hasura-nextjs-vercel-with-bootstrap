@@ -20,7 +20,7 @@ Our [Next.js](https://nextjs.org) application requires you to define several env
 
 Please copy `app/.env.example` to `app/.env` and make sure you have defined all the values requested:
 
-```sh
+````sh
 # Application settings
 DOMAIN=http://localhost:3000
 SESSION_COOKIE_SECRET=BXyv4qDtBKYxJtLopfY7nj75sJg3p2Ka
@@ -32,9 +32,17 @@ AUTH0_AUDIENCE=
 AUTH0_CLIENT_ID=
 AUTH0_CLIENT_SECRET=
 AUTH0_DOMAIN=
-POST_LOGOUT_REDIRECT_URI=http://localhost:3000/
-REDIRECT_URI=http://localhost:3000/api/callback
-```
+
+# ------------------------------------------------------ #
+#          DO NOT DEFINE THESE IN YOUR .env FILE         #
+# ------------------------------------------------------ #
+# Define these for each environment in Vercel            #
+# ------------------------------------------------------ #
+# GRAPHQL_HTTPS_ENDPOINT=https://explore-hasura-apollo-nextjs.herokuapp.com/v1/graphql
+# GRAPHQL_WSS_ENDPOINT=wss://explore-hasura-apollo-nextjs.herokuapp.com/v1/graphql
+# POST_LOGOUT_REDIRECT_URI=http://localhost:3000/
+# REDIRECT_URI=http://localhost:3000/api/callback
+# ------------------------------------------------------ #```
 
 ### Start the application
 
@@ -49,7 +57,7 @@ $ npm run dev
 
 # To run Next.js as a production server
 $ npm start
-```
+````
 
 If you have defined your environment variables correctly, your app should be running at [http://localhost:3000](http://localhost:3000) - allowing you to log in and log out using [Auth0](https://auth0.com) for authentication.
 
@@ -120,6 +128,8 @@ This project has been configured on [Vercel](https://vercel.com/) so that manual
 
 For this to happen, the following environment variables need to be defined in the [Vercel](https://vercel.com/) UI for `Production` and `Preview` environments:
 
+- GRAPHQL-HTTPS-ENDPOINT
+- GRAPHQL-WSS-ENDPOINT
 - POST_LOGOUT_REDIRECT_URI
 - REDIRECT_URI
 
